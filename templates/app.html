@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        body{
+            color: aqua;
+        }
+        input{
+            border-radius: 60px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/">
+        <input type="text" id="name" required>
+        <input type="email" id="email" required>
+        <input type="password" id="password" required>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html> -->
+
+
+<!--  -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <h2>Simple Calculator</h2>
+
+    <form method="POST">
+        <label for="x">Enter value of x:</label><br>
+        <input type="text" name="x" >
+        <br/>
+        <br/>
+
+        <label for="y">Enter value of y:</label><br>
+        <input type="text" name="y" >
+        <br/>
+        <br/>
+
+        <label for="operator">Select operator:</label><br>
+        <select name="operator" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <br/>
+        <br/>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+        <h3>Result: {{ result }}</h3>
+
+</body>
+</html>
