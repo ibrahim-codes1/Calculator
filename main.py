@@ -54,8 +54,7 @@ def indexwelcome():
             elif operator == "/":
                 if y == 0:
                     result = "error show me"
-            else:
-                result = "Error: Invalid operator"
+          
 
     return render_template("app.html", result=result)
 
