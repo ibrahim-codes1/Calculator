@@ -54,8 +54,6 @@ def indexwelcome():
             elif operator == "/":
                 if y == 0:
                     result = "error show me"
-                else:
-                    result = x / y
             else:
                 result = "Error: Invalid operator"
 
