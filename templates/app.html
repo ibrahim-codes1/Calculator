@@ -28,46 +28,80 @@
 
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      text-align: center;
+      }
+  </style>
 </head>
 <body>
 
-    <h2>Simple Calculator</h2>
+  <form action="/" method="POST">
+    <input type="text" name="boxname" id="x"/>
+    <br />
+    <button type="submit" id="equal">equal</button>
+  </form>
 
-    <form method="POST">
-        <label for="x">Enter value of x:</label><br>
-        <input type="text" name="x" >
-        <br/>
-        <br/>
+  <div >
+    <button type="button" value="1" id="1">1</button>
+    <button type="button" value="2" id="2">2</button>
+    <button type="button" value="3" id="3">3</button>
+    <br />
+    <button type="button" value="4" id="4">4</button>
+    <button type="button" value="5" id="5">5</button>
+    <button type="button" value="6" id="6">6</button>
+    <br />
+    <button type="button" value="7" id="7">7</button>
+    <button type="button" value="8" id="8">8</button>
+    <button type="button" value="9" id="9">9</button>
+    <br />
+    <button type="button" id="op1">+</button>
+    <button type="button" id="op2">-</button>
+    <button type="button" id="op3">*</button>
+  </div>
 
-        <label for="y">Enter value of y:</label><br>
-        <input type="text" name="y" >
-        <br/>
-        <br/>
+  <h3>Result: {{result}}</h3>
 
-        <label for="operator">Select operator:</label><br>
-        <select name="operator" required>
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-        </select>
-        <br/>
-        <br/>
-
-        <button type="submit">Calculate</button>
-    </form>
-
-        <h3>Result: {{ result }}</h3>
+  <script>
+  x=document.getElementById('x')
+  for (let i=1; i < 10; i++){
+  let text=i.toString()
+  button=document.getElementById(text)
+  button.onclick=function(event){
+    console.log(event.target.value)
+    x.value += event.target.value 
+    console.log(x.value)
+    }
+  }
+  button=document.getElementById("op1")
+  button.onclick=function(event){
+    console.log(event.target.value)
+    x.value += "+" 
+    console.log(x.value)
+  }
+  
+  button=document.getElementById("op2")
+  button.onclick=function(event){
+    console.log(event.target.value)
+    x.value += "-" 
+    console.log(x.value)
+  }
+  
+  button=document.getElementById("op3")
+  button.onclick=function(event){
+    console.log(event.target.value)
+    x.value += "*" 
+    console.log(x.value)
+  }
+  
+  
+  </script>
 
 </body>
 </html>
