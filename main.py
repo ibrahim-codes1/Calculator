@@ -29,6 +29,7 @@
 
 from flask import Flask, request, render_template
 app = Flask(__name__)
+@app.route('/history')
 @app.route('/', methods=["GET", "POST"])
 def indexwelcome():
     result = ""
